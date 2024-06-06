@@ -117,7 +117,7 @@ main {
     padding: 50px 20px;
 }
 
-footer {
+/* footer {
     background-color: #3a9a35;
     color: white;
     text-align: center;
@@ -125,4 +125,11 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
+} */
+:host {
+    display: block;
+    background-color: #294145;
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
 }
