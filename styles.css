@@ -126,10 +126,25 @@ main {
     width: 100%;
     bottom: 0;
 } */
-:host {
+.footer {
     display: block;
     background-color: #294145;
     color: white;
     padding: 10px 20px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+.title {
+    font-size: 50px;
+    text-align: right;
+}
+
+@media (max-width: 768px) {
+    .title {
+        text-align: center;
+    }
+}
+.frase{
+    font-size: 20px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }

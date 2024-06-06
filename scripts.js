@@ -26,19 +26,19 @@ class MyFooter extends HTMLElement {
     }
 
     render() {
-        const title = this.getAttribute('title') || 'Ecoviron';
-        const attribute = this.getAttribute('attribute') || 'Default Attribute';
-        const customAttribute = this.getAttribute('custom-attribute') || 'Custom Attribute';
+        const title = this.getAttribute('title');
+        const frase = this.getAttribute('frase');
+      //  const customAttribute = this.getAttribute('custom-attribute');
         this.shadowRoot.innerHTML = `
             <link rel="stylesheet" href="styles.css">
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-            <div class= container>
+            <div class="footer">
             <div class="row mt-4 p-4">
-            <div class="col-6"><h1>${title}</h1></div>
-            <div class="col-6">${attribute}</div>
+                <div class="col-md-5 col-12 title"><strong>${title}</strong></div>
+                <div class="col-md-5 col-12 frase">${frase}</div>
             </div>
+            <hr style="border-top: 2px solid #ffffff; width:70%; border-radius:2px;">
             <br>
-            <div>${customAttribute}</div>
             <slot></slot>
             </div>
         `;
