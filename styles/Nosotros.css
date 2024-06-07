@@ -1,0 +1,71 @@
+.np-image {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  background-image: url('/img/PortadaNosotros.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.np-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.np-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  z-index: 2; 
+}
+.np-text h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 50px;
+  font-weight: bold; 
+}
+
+.objetivo-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  background-color: white; 
+}
+.objetivo-box {
+  background-color: white;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+  max-width: 800px;
+  text-align: justify;
+}
+.objetivo-box h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: bold; 
+  color: #6EA343;
+  text-align: center;
+}
+
+.objetivos-tarjetas h2{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: bold; 
+  color: #6EA343;
+  text-align: center;
+
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px; 
+  padding: 20px;
+}
