@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/Contacto.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <title>Contácto</title>
+</head>
+
+<body>
+  <div class="np-image">
+    <div class="np-text">
+      <h1>Contáctanos</h1>
+    </div>
+  </div>
+
+  <div class="objetivos-tarjetas">
+    <h2>Formulario de Contácto</h2>
+  </div>
+  
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="form-container">
+          <div class="form-image">
+            <img src="/img/contacto.jpg" alt="Imagen">
+          </div>
+          <div class="form-fields">
+            <form>
+              <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="telefono">Teléfono</label>
+                <input type="tel" class="form-control" id="telefono" name="telefono">
+              </div>
+              <div class="form-group">
+                <label for="descripcion">Descripción</label>
+                <textarea class="form-control" id="descripcion" name="descripcion" rows="3" required></textarea>
+              </div>
+              <button type="submit" class=" btn-custom">Enviar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="objetivos-tarjetas">
+    <h2>Encuéntranos más fácil</h2>
+  </div>
+  
+  <div class="contenedor-mapa">
+    <div id="mapa" class="mapa"></div>
+  </div>
+
+
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="/scripts/ContactoMap.js"></script>
+  <script src="/scripts/ContactoShadowDOM.js"></script>
+
+</body>
+
+</html>

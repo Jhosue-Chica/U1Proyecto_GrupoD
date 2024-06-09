@@ -124,7 +124,7 @@ class ImageCard extends HTMLElement {
             transform: scale(1.2);
           }
           .social-icons img {
-            width: 70px; /* Ajustar el tamaño de los íconos según sea necesario */
+            width: 70px; 
             height: auto;
           }
           h2 {

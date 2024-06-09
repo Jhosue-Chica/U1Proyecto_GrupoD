@@ -1,0 +1,97 @@
+.np-image {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    background-image: url('/img/PortadaContacto.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .np-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  
+  .np-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 2;
+  }
+  
+  .np-text h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+  }
+  .objetivos-tarjetas h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #6EA343;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 40px;
+  }
+  .contenedor-mapa {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    height: 400px; 
+  }
+  
+  .mapa {
+    width: 100%;
+    max-width: 1100px;
+  }
+
+  .form-container {
+    display: flex;
+    align-items: center;
+  }
+  .form-image {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+  }
+  .form-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  .form-fields {
+    flex: 1;
+    padding: 20px;
+    color: white;
+    border-radius: 20px;
+    background-color: #294145;
+  }
+  .form-control {
+    color: #294145; 
+  }
+  .form-control::placeholder {
+    color: #6c757d;
+  }
+
+  .btn-custom {
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #6EA343; 
+    color: #fff; 
+    border: none;     
+  }
+
+  .btn-custom:hover {
+    background-color: white; 
+    color: #6EA343;  
+  }
