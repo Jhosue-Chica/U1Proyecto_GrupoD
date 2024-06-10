@@ -5,59 +5,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ECO ESPE</title>
-    <link rel="icon" href="../image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="../styles/styles.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="../styles/Carousel.css">
+    <link rel="stylesheet" href="../styles/Header.css">
     <meta name="description"
         content="Únete a ECO ESPE para marcar la diferencia. Apoya nuestras campañas, sé voluntario y contribuye a un mundo mejor.">
     <meta name="keywords" content="medio ambiente, donación, caridad, voluntariado, apoyo, campaña">
 </head>
 
 <body>
-    <header>
-        <div class="contact-info">
-            <span aria-label="teléfono">📞 +33 877 554 332</span>
-            <span aria-label="correo electrónico">✉️ info@website.com</span>
-            <span aria-label="horario de trabajo">🕒 Lun - Vie: 9:00 - 18:30</span>
-        </div>
-        <div class="logo-nav">
-            <h1>ECO ESPE</h1>
-            <nav>
-                <ul>
-                    <li><a href="#" aria-label="inicio">Inicio</a></li>
-                    <li><a href="#" aria-label="sobre nosotros">Sobre Nosotros</a></li>
-                    <li><a href="#" aria-label="páginas">Páginas</a></li>
-                    <li><a href="#" aria-label="campaña">Campaña</a></li>
-                    <li><a href="#" aria-label="artículos">Artículos</a></li>
-                    <li><a href="" aria-label="contacto">Contacto</a></li>
-                </ul>
+    <header class="bg-light py-3">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="contact-info d-flex">
+                    <span class="mr-3"><i class="fas fa-phone-alt"></i> +33 877 554 332</span>
+                    <span class="mr-3"><i class="fas fa-envelope"></i> info@website.com</span>
+                    <span><i class="fas fa-clock"></i> Lun - Vie: 9:00 - 18:30</span>
+                </div>
+                <div class="logo">
+                    <h1 class="m-0">ECO ESPE</h1>
+                </div>
+                <div>
+                    <button class="btn btn-success" aria-label="donar ahora">Donar Ahora</button>
+                </div>
+            </div>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" href="#" aria-label="inicio">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#" aria-label="sobre nosotros">Sobre Nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#" aria-label="páginas">Páginas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#" aria-label="campaña">Campaña</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#" aria-label="artículos">Artículos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#" aria-label="contacto">Contacto</a></li>
+                    </ul>
+                </div>
             </nav>
-            <button class="donate-button" aria-label="donar ahora">Donar Ahora</button>
         </div>
     </header>
 
     <main>
         <carousel-element slides='[
-                {"background": "https://htmldesigntemplates.com/ecoviron/wp-content/uploads/sites/27/2023/03/a-dandelion-in-the-grass-is-illuminated-by-a-ray-o-2022-01-12-05-19-52-utc-1.jpg", "subtitle": "End Pollution", "title": "Lets Take Action To Eliminate Pollution", "text": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", "button": "Learn More"},
-                {"background": "https://htmldesigntemplates.com/ecoviron/wp-content/uploads/sites/27/2023/03/an-adult-man-helps-children-to-plant-a-tree-at-an-2022-11-07-09-46-06-utc-1.jpg", "subtitle": "Reuse Plastic", "title": "Save The Planet. Reduce Recycle The Plastic", "text": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", "button": "Join Campaign"},
-                {"background": "https://htmldesigntemplates.com/ecoviron/wp-content/uploads/sites/27/2023/03/beautiful-green-algae-on-the-lake-in-summer-flyin-2022-04-05-07-26-18-utc-1.jpg", "subtitle": "Donate and help", "title": "Together we can make a difference", "text": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", "button": "Start Today"}
+                {"background": "../img/banner1-index.jpg", "subtitle": "End Pollution", "title": "Lets Take Action To Eliminate Pollution", "text": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", "button": "Learn More"},
+                {"background": "../img/banner2-index.jpg", "subtitle": "Reuse Plastic", "title": "Save The Planet. Reduce Recycle The Plastic", "text": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", "button": "Join Campaign"},
+                {"background": "../img/banner3-index.jpg", "subtitle": "Donate and help", "title": "Together we can make a difference", "text": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", "button": "Start Today"}
             ]'>
         </carousel-element>
 
         <section class="features">
             <div class="feature">
-                <div class="icon">📚</div>
+                <div class="icon"><i class="fas fa-book"></i></div>
                 <h3>Apoya una Campaña</h3>
                 <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.</p>
             </div>
             <div class="feature">
-                <div class="icon">🌍</div>
+                <div class="icon"><i class="fas fa-globe"></i></div>
                 <h3>Ambiente Seguro</h3>
                 <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.</p>
             </div>
             <div class="feature">
-                <div class="icon">👥</div>
+                <div class="icon"><i class="fas fa-users"></i></div>
                 <h3>Hazte Voluntario</h3>
                 <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.</p>
             </div>
@@ -72,7 +86,7 @@
             <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
                 laborum.</p>
             <p><strong>Mark Mcguire, CEO</strong></p>
-            <p>📞 Para cualquier consulta llama a la línea directa: +92 123 456 7890</p>
+            <p><i class="fas fa-phone-alt"></i> Para cualquier consulta llama a la línea directa: +92 123 456 7890</p>
         </section>
     </main>
 
@@ -80,6 +94,9 @@
         frase='"Crece con firmeza, arraízate en la tierra y extiende tus hojas hacia el sol. En cada nuevo brote, encuentra la fuerza para florecer."'>&copy;
         2024 ECO ESPE. Todos los derechos reservados.</my-footer>
 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="../scripts/Carousel.js"></script>
     <script src="../scripts/Footer.js"></script>
