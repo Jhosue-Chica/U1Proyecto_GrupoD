@@ -1,0 +1,32 @@
+.footer {
+    display: block;
+    background-color: #294145;
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    /* text-align: center; Add this line to center the content */
+}
+
+.logo-footer{
+    display: flex;
+    justify-content: end;   
+}
+@media screen and (max-width: 768px) {
+    .logo-footer {
+        justify-content: center;
+    }
+}
+.logo-footer >img{
+    width: 52%;
+    margin-right: 0px;
+    text-align: center;
+}
+
+.frase{
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.redes_sociales img{
+    width: 15%;
+    margin: 0px;
+}
