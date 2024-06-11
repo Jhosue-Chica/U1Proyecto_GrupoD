@@ -122,3 +122,5 @@ class CarouselElement extends HTMLElement {
 }
 
 customElements.define('carousel-element', CarouselElement);
+
+export default CarouselElement;
