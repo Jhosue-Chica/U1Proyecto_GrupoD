@@ -16,25 +16,12 @@ main {
     background-color: #f0f0f0;
 }
 
-.feature {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    width: 30%;
-    text-align: center;
-}
-
-.icon {
-    font-size: 2em;
-    margin-bottom: 10px;
-}
-
 .about {
     padding: 50px 20px;
 }
 
 footer {
-    background-color: #3a9a35;
+    background-color:#6c757d;
     color: white;
     text-align: center;
     padding: 10px 20px;

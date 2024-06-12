@@ -6,7 +6,7 @@ header {
 
 .contact-info {
     font-size: 1rem;
-    color: #6c757d;
+    color: #4f5357;
 }
 
 .contact-info span {
@@ -16,7 +16,7 @@ header {
 
 .contact-info i {
     margin-right: 8px;
-    color: #28a745;
+    color: #6fa243;
 }
 
 .logo img {
@@ -37,6 +37,8 @@ header {
 
 .navbar-nav .nav-link {
     color: #28a745;
+    font-size: 1rem;
+    font-weight: bolder;
     margin-right: 20px;
     transition: color 0.4s, background-color 0.4s;  
     padding: 5px 10px;
@@ -45,11 +47,11 @@ header {
 
 .navbar-nav .nav-link:hover {
     color: #155724;
-    background-color: #d4edda;
+    background-color: #85d04486;
 }
 
 .donate-button {
-    background-color: #28a745;
+    background-color: #6fa243;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -62,35 +64,7 @@ header {
     background-color: #155724;
 }
 
-/* Mobile adjustments */
-@media (max-width: 768px) {
-    .contact-info {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .contact-info span {
-        margin-bottom: 10px;
-        margin-right: 0;
-    }
-
-    .logo {
-        text-align: center;
-        margin-top: 10px;
-    }
-
-    .navbar-nav {
-        text-align: center;
-    }
-
-    .navbar-nav .nav-link {
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-}
-
-/* Animations */
-
+/* Animaciones*/
 @keyframes slideInTop {
     from {
         transform: translateY(-100%);

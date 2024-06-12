@@ -4,3 +4,5 @@ import './Footer.js';
 import './HeaderElement.js';
 // import Carousel
 import './Carousel.js';
+// import features
+import './feature-element.js';
