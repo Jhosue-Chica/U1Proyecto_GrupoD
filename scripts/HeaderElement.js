@@ -103,11 +103,25 @@ class HeaderElement extends HTMLElement {
                     }
                 }
 
-                .logo,
+                @keyframes slideInLeft {
+                    from {
+                        transform: translateX(-50%);
+                        opacity: 0;
+                    }
+                    to {
+                        transform: translateY(0);
+                        opacity: 1;
+                    }
+                }
+
+        
                 .contact-info {
                     animation: slideInTop 1s ease-out;
                 }
 
+                .logo {
+                    animation: slideInLeft 1s ease-out;
+                }
                 @keyframes fadeIn {
                     from {
                         opacity: 0;
