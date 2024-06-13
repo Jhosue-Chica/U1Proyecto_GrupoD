@@ -120,25 +120,57 @@ class HeaderElement extends HTMLElement {
                 .donate-button {
                     animation: fadeIn 2s ease-in;
                 }
+
+                /* Media Queries for Mobile */
+                @media (max-width: 768px) {
+                    .contact-info {
+                        flex-direction: column;
+                        align-items: flex-start;
+                    }
+
+                    .contact-info span {
+                        margin-right: 0;
+                        margin-bottom: 10px;
+                    }
+
+                    .navbar-nav .nav-link {
+                        margin-right: 0;
+                        margin-bottom: 10px;
+                        display: block;
+                    }
+
+                    .d-flex {
+                        flex-direction: column;
+                    }
+
+                    .logo {
+                        margin-bottom: 15px;
+                    }
+
+                    .donate-button {
+                        width: 100%;
+                        margin-top: 10px;
+                    }
+                }
             </style>
             <header class="bg-light py-3">
                 <div class="container">
-                    <div class="d-flex justify-content-between align-items-center">
+                    <div class="d-flex justify-content-between align-items-center flex-column flex-md-row">
                         <div class="logo">
                             <img src="${logoSrc}" alt="Logo" class="logo-img">
                         </div>
-                        <div class="contact-info d-flex">
+                        <div class="contact-info d-flex flex-column flex-md-row align-items-center">
                             <span class="mr-3"><i class="fas fa-phone-alt"></i> ${phone}</span>
-                            <span class="mr-3">|</span>
+                            <span class="mr-3 d-none d-md-block">|</span>
                             <span class="mr-3"><i class="fas fa-envelope"></i> ${email}</span>
-                            <span class="mr-3">|</span>
+                            <span class="mr-3 d-none d-md-block">|</span>
                             <span><i class="fas fa-clock"></i> ${hours}</span>
                         </div>
                         <div>
                             <button class="btn btn-success donate-button" aria-label="donar ahora">Donar Ahora</button>
                         </div>
                     </div>
-                    <div class="d-flex justify-content-center align-items-center">
+                    <div class="d-flex justify-content-center align-items-center mt-3 mt-md-0">
                         <nav class="navbar navbar-expand-lg navbar-light">
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -161,4 +193,20 @@ class HeaderElement extends HTMLElement {
 
 customElements.define('header-element', HeaderElement);
 
-export default HeaderElement;
+
+export function createHeaderElement() {
+    const headerElement = document.createElement('header-element');
+    headerElement.setAttribute('logo-src', '../img/1_copy.png');
+    headerElement.setAttribute('phone', '+33 877 554 332');
+    headerElement.setAttribute('email', 'info@website.com');
+    headerElement.setAttribute('hours', 'Lun - Vie: 9:00 - 18:30');
+    headerElement.setAttribute('links', JSON.stringify([
+        { "href": "index.html", "text": "Inicio", "label": "inicio" },
+        { "href": "Nosotros.html", "text": "Sobre Nosotros", "label": "sobre nosotros" },
+        { "href": "#", "text": "Páginas", "label": "páginas" },
+        { "href": "#", "text": "Campaña", "label": "campaña" },
+        { "href": "#", "text": "Artículos", "label": "artículos" },
+        { "href": "Contacto.html", "text": "Contacto", "label": "contacto" }
+    ]));
+    return headerElement;
+}
