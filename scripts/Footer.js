@@ -9,9 +9,7 @@ class MyFooter extends HTMLElement {
     }
 
     render() {
-        //const title = this.getAttribute('title');
         const frase = this.getAttribute('frase');
-        //  const customAttribute = this.getAttribute('custom-attribute');
         this.shadowRoot.innerHTML = `
             <link rel="stylesheet" href="/styles/footer.css">
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
