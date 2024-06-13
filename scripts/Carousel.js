@@ -81,7 +81,7 @@ class CarouselElement extends HTMLElement {
                     <h3 class="banner-sub-title">${slide.subtitle}</h3>
                     <h1 class="banner-title">${slide.title}</h1>
                     <p>${slide.text}</p>
-                    <a href="#" class="btn-one">${slide.button}</a>
+                    <a href="${slide.buttonLink}" class="btn-one">${slide.button}</a>
                 </div>
             </div>
         `).join('');
