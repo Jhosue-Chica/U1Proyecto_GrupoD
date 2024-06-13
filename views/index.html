@@ -9,38 +9,37 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="../styles/styles.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="../styles/Carousel.css">
-    <meta name="description" content="Únete a ECO ESPE para marcar la diferencia. Apoya nuestras campañas, sé voluntario y contribuye a un mundo mejor.">
+    <meta name="description"
+        content="Únete a ECO ESPE para marcar la diferencia. Apoya nuestras campañas, sé voluntario y contribuye a un mundo mejor.">
     <meta name="keywords" content="medio ambiente, donación, caridad, voluntariado, apoyo, campaña">
 </head>
 
 <body>
-    <header-element></header-element>
+    <header-element logo-src="../img/1_copy.png" phone="+33 877 554 332" email="info@website.com"
+        hours="Lun - Vie: 9:00 - 18:30" links='[
+        {"href": "index.html", "text": "Inicio", "label": "inicio"},
+        {"href": "Nosotros.html", "text": "Sobre Nosotros", "label": "sobre nosotros"},
+        {"href": "#", "text": "Páginas", "label": "páginas"},
+        {"href": "#", "text": "Campaña", "label": "campaña"},
+        {"href": "#", "text": "Artículos", "label": "artículos"},
+        {"href": "Contacto.html", "text": "Contacto", "label": "contacto"}
+    ]'></header-element>
+
 
     <main>
         <carousel-element slides='[
-        {"background": "../img/banner1-index.jpg", "subtitle": "Fin a la contaminación", "title": "Tomemos Acción Para Eliminar la Contaminación", "text": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", "button": "Más Información"},
-        {"background": "../img/banner2-index.jpg", "subtitle": "Reutiliza el plástico", "title": "Salva El Planeta. Reduce y Recicla el Plástico", "text": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", "button": "Únete a la Campaña"},
-        {"background": "../img/banner3-index.jpg", "subtitle": "Dona y ayuda", "title": "Juntos podemos hacer la diferencia", "text": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", "button": "Comienza Hoy"}
-    ]'>
-        </carousel-element>
+            {"background": "../img/banner1-index.jpg", "subtitle": "Fin a la contaminación", "title": "Tomemos Acción Para Eliminar la Contaminación", "text": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", "button": "Más Información"},
+            {"background": "../img/banner2-index.jpg", "subtitle": "Reutiliza el plástico", "title": "Salva El Planeta. Reduce y Recicla el Plástico", "text": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", "button": "Únete a la Campaña"},
+            {"background": "../img/banner3-index.jpg", "subtitle": "Dona y ayuda", "title": "Juntos podemos hacer la diferencia", "text": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", "button": "Comienza Hoy"}
+        ]'></carousel-element>
 
         <section class="features">
-            <div class="feature">
-                <div class="icon"><i class="fas fa-book"></i></div>
-                <h3>Apoya una Campaña</h3>
-                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.</p>
-            </div>
-            <div class="feature">
-                <div class="icon"><i class="fas fa-globe"></i></div>
-                <h3>Ambiente Seguro</h3>
-                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.</p>
-            </div>
-            <div class="feature">
-                <div class="icon"><i class="fas fa-users"></i></div>
-                <h3>Hazte Voluntario</h3>
-                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.</p>
-            </div>
+            <feature-element icon="fas fa-book" title="Apoya una Campaña"
+                text="Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt."></feature-element>
+            <feature-element icon="fas fa-globe" title="Ambiente Seguro"
+                text="Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt."></feature-element>
+            <feature-element icon="fas fa-users" title="Hazte Voluntario"
+                text="Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt."></feature-element>
         </section>
 
         <section class="about">
@@ -58,14 +57,61 @@
 
     <my-footer title="ECO ESPE"
         frase='"Crece con firmeza, arraízate en la tierra y extiende tus hojas hacia el sol. En cada nuevo brote, encuentra la fuerza para florecer."'>&copy;
-       </my-footer>
+    </my-footer>
+
+    <template id="feature-template">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <style>
+            .feature {
+                align-items: center;
+                padding: 10px;
+                border: 1px solid #ddd;
+                background-color: #ffffff;
+                border-radius: 1.5em;
+                margin: 10px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                transition: all 0.3s ease-in-out;
+            }
+
+            .feature:hover {
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+            }
+
+            .icon {
+                font-size: 24px;
+                margin-right: 10px;
+                color: #6fa243;
+                transition: color 0.3s ease-in-out;
+            }
+
+            .feature:hover .icon {
+                color: #284144;
+            }
+
+            h3 {
+                margin: 0;
+                color: #284144;
+                transition: color 0.3s ease-in-out;
+            }
+
+            .feature:hover h3 {
+                color: #6fa243;
+            }
+        </style>
+        <div class="feature">
+            <div class="icon"><i class=""></i></div>
+            <div>
+                <h3></h3>
+                <p></p>
+            </div>
+        </div>
+    </template>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script type="module" src="../scripts/IndexModule.js"></script>
-    <script type="module" src="../scripts/header-element.js"></script>
 
 </body>
 
