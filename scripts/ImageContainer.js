@@ -79,3 +79,5 @@ class ImageContainer extends HTMLElement {
 }
 
 window.customElements.define('image-container', ImageContainer);
+
+export default ImageContainer;

@@ -8,6 +8,8 @@ import './Carousel.js';
 import './feature-element.js';
 // import FechaCuadro
 import './FechaCuadro.js';
+// import ImageContainer
+import './ImageContainer.js';
 
 
 document.addEventListener('DOMContentLoaded', () => {
