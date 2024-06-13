@@ -241,8 +241,6 @@ export function createHeaderElement() {
     headerElement.setAttribute('links', JSON.stringify([
         { "href": "index.html", "text": "Inicio", "label": "inicio" },
         { "href": "Nosotros.html", "text": "Sobre Nosotros", "label": "sobre nosotros" },
-        { "href": "#", "text": "Páginas", "label": "páginas" },
-        { "href": "#", "text": "Campaña", "label": "campaña" },
         { "href": "productos.html", "text": "Artículos", "label": "artículos" },
         { "href": "Contacto.html", "text": "Contacto", "label": "contacto" }
     ]));
