@@ -5,7 +5,7 @@ class HeaderElement extends HTMLElement {
     }
 
     static get observedAttributes() {
-        return ['logo-src', 'phone', 'email', 'hours', 'links'];
+        return ['logo-src', 'phone', 'email', 'hours', 'links', 'social-links'];
     }
 
     attributeChangedCallback(name, oldValue, newValue) {
@@ -22,6 +22,7 @@ class HeaderElement extends HTMLElement {
         const email = this.getAttribute('email') || 'info@website.com';
         const hours = this.getAttribute('hours') || 'Lun - Vie: 9:00 - 18:30';
         const links = JSON.parse(this.getAttribute('links') || '[]');
+        const socialLinks = JSON.parse(this.getAttribute('social-links') || '[]');
 
         this.shadowRoot.innerHTML = `
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -83,6 +84,7 @@ class HeaderElement extends HTMLElement {
                     color: white;
                     border: none;
                     padding: 10px 20px;
+                    margin-top: 2em;
                     font-size: 1rem;
                     border-radius: 5px;
                     transition: background-color 0.3s;
@@ -109,12 +111,11 @@ class HeaderElement extends HTMLElement {
                         opacity: 0;
                     }
                     to {
-                        transform: translateY(0);
+                        transform: translateX(0);
                         opacity: 1;
                     }
                 }
 
-        
                 .contact-info {
                     animation: slideInTop 1s ease-out;
                 }
@@ -122,6 +123,7 @@ class HeaderElement extends HTMLElement {
                 .logo {
                     animation: slideInLeft 1s ease-out;
                 }
+
                 @keyframes fadeIn {
                     from {
                         opacity: 0;
@@ -133,6 +135,21 @@ class HeaderElement extends HTMLElement {
 
                 .donate-button {
                     animation: fadeIn 2s ease-in;
+                }
+
+                .social-icons {
+                    display: flex;
+                    gap: 10px;
+                    margin-top: 10px;
+                }
+
+                .social-icons a {
+                    color: #6fa243;
+                    transition: color 0.3s;
+                }
+
+                .social-icons a:hover {
+                    color: #155724;
                 }
 
                 /* Media Queries for Mobile */
@@ -179,6 +196,14 @@ class HeaderElement extends HTMLElement {
                             <span class="mr-3"><i class="fas fa-envelope"></i> ${email}</span>
                             <span class="mr-3 d-none d-md-block">|</span>
                             <span><i class="fas fa-clock"></i> ${hours}</span>
+                            <span class="mr-3 d-none d-md-block">|</span>
+                            <div class="social-icons">
+                                ${socialLinks.map(link => `
+                                    <a href="${link.href}" aria-label="${link.label}" target="_blank">
+                                        <i class="fab fa-${link.icon}"></i>
+                                    </a>
+                                `).join('')}
+                            </div>
                         </div>
                         <div>
                             <button class="btn btn-success donate-button" aria-label="donar ahora">Donar Ahora</button>
@@ -207,7 +232,6 @@ class HeaderElement extends HTMLElement {
 
 customElements.define('header-element', HeaderElement);
 
-
 export function createHeaderElement() {
     const headerElement = document.createElement('header-element');
     headerElement.setAttribute('logo-src', '../img/1_copy.png');
@@ -219,8 +243,13 @@ export function createHeaderElement() {
         { "href": "Nosotros.html", "text": "Sobre Nosotros", "label": "sobre nosotros" },
         { "href": "#", "text": "Páginas", "label": "páginas" },
         { "href": "#", "text": "Campaña", "label": "campaña" },
-        { "href": "#", "text": "Artículos", "label": "artículos" },
+        { "href": "productos.html", "text": "Artículos", "label": "artículos" },
         { "href": "Contacto.html", "text": "Contacto", "label": "contacto" }
+    ]));
+    headerElement.setAttribute('social-links', JSON.stringify([
+        { "href": "https://facebook.com", "icon": "facebook", "label": "Facebook" },
+        { "href": "https://twitter.com", "icon": "twitter", "label": "Twitter" },
+        { "href": "https://instagram.com", "icon": "instagram", "label": "Instagram" }
     ]));
     return headerElement;
 }
