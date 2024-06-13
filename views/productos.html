@@ -10,22 +10,39 @@
 
 </head>
 <style>
+    .container-fluid {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
     #product-list {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         grid-gap: 5px;
+        background-color: #f0f0f0;
+        padding: 30px;
+        border-radius: 15px;
+        
     }
+
     .product-card {
         border: 1px solid #ccc;
         padding: 0px;
         margin: 0px;
     }
-    
 </style>
 
 <body>
-    <header-element></header-element>
-    <section id="products" class="container my-4">
+    <header-element logo-src="../img/1_copy.png" phone="+33 877 554 332" email="info@website.com"
+        hours="Lun - Vie: 9:00 - 18:30" links='[
+    {"href": "index.html", "text": "Inicio", "label": "inicio"},
+    {"href": "Nosotros.html", "text": "Sobre Nosotros", "label": "sobre nosotros"},
+    {"href": "#", "text": "Páginas", "label": "páginas"},
+    {"href": "#", "text": "Campaña", "label": "campaña"},
+    {"href": "#", "text": "Artículos", "label": "artículos"},
+    {"href": "Contacto.html", "text": "Contacto", "label": "contacto"}
+]'></header-element>
+
+    <section id="products" class="container-fluid my-4">
         <h2 class="text-center text-success">Productos</h2>
         <div class="col" id="product-list">
             <!-- Tarjetas de productos se insertarán aquí -->
@@ -35,11 +52,17 @@
     <!-- Templates -->
     <template id="product-card-template">
         <style>
-           
-            .card {          
+            .card {
                 background-color: beige;
                 border: 3px solid #ccc;
+                 box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
             }
+
+            .card:hover {
+                transform: scale(1.08);
+                transition: transform 0.5s ease-in-out;
+            }
+
             .card img {
                 width: 100%;
                 height: 200px;
@@ -66,7 +89,7 @@
                     <h5 class="card-title"></h5>
                     <p class="card-text"></p>
                     <p class="card-texto"><small class="text-muted"></small></p>
-                    <a href="https://wa.link/3wwn9i" class="btn btn-secondary whatsapp-btn">Información</a>
+                    <custom-button link="https://wa.link/3wwn9i"></custom-button>
                 </div>
             </div>
     </template>
@@ -75,15 +98,15 @@
 
 
 
-    <my-footer title="ECO ESPE"
-        frase='"Crece con firmeza, arraízate en la tierra y extiende tus hojas hacia el sol. En cada nuevo brote, encuentra la fuerza para florecer."'>&copy;
-    </my-footer>
+<my-footer title="ECO ESPE"
+    frase='"Crece con firmeza, arraízate en la tierra y extiende tus hojas hacia el sol. En cada nuevo brote, encuentra la fuerza para florecer."'>&copy;
+</my-footer>
 
-
-    <script type="module" src="../scripts/ProductosHTMLTemplate.js"></script>
-    <script type="module" src="/scripts/Footer.js"></script>
-    <script type="module" src="../scripts/header-element.js"></script>
-    <script type="module" src="../scripts/IndexModule.js"></script>
+<script type="module" src="../scripts/ProductosCustom.js"></script>
+<script type="module" src="../scripts/ProductosHTMLTemplate.js"></script>
+<script type="module" src="/scripts/Footer.js"></script>
+<script type="module" src="../scripts/header-element.js"></script>
+<script type="module" src="../scripts/IndexModule.js"></script>
 </body>
 
 </html>

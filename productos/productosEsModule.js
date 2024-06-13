@@ -10,5 +10,5 @@ export const productos = [
     { name: 'Bamboo Palm', price: '$15', image: 'bamboo-palm.jfif',texto: 'Bamboo Palm es una planta de interior popular que es fácil de cuidar y puede sobrevivir en condiciones de poca luz. También es conocida por su capacidad para purificar el aire.' },
     { name: 'Rubber Plant', price: '$18', image: 'rubber-plant.jfif',texto: 'Rubber Plant es una planta de interior popular que es fácil de cuidar y puede sobrevivir en condiciones de poca luz. También es conocida por su capacidad para purificar el aire.' },
     { name: 'Monstera', price: '$22', image: 'monstera.jfif',texto: 'Monstera es una planta de interior popular que es fácil de cuidar y puede sobrevivir en condiciones de poca luz. También es conocida por sus hojas grandes y brillantes.' },
-    { name: 'Succulent Mix', price: '$30', image: 'succulent-mix.jfif',texto: 'Succulent Mix es una colección de plantas suculentas que son fáciles de cuidar y pueden sobrevivir en condiciones de poca agua. Son conocidas por sus formas únicas .'}
+    //{ name: 'Succulent Mix', price: '$30', image: 'succulent-mix.jfif',texto: 'Succulent Mix es una colección de plantas suculentas que son fáciles de cuidar y pueden sobrevivir en condiciones de poca agua. Son conocidas por sus formas únicas .'}
 ];
