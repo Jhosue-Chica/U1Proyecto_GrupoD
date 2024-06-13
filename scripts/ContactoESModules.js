@@ -1,4 +1,7 @@
 import { template } from './ContactoEsModulesExp.js';
+// import Header
+import { createHeaderElement } from './HeaderElement.js';
+
 
 class CardComponent extends HTMLElement {
     constructor() {
@@ -46,3 +49,8 @@ class CardComponent extends HTMLElement {
 }
 
 customElements.define('card-component', CardComponent);
+
+document.addEventListener('DOMContentLoaded', () => {
+    const headerElement = createHeaderElement();
+    document.body.prepend(headerElement);
+});

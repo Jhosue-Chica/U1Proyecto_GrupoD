@@ -12,7 +12,7 @@ main {
 .features {
     display: flex;
     justify-content: space-around;
-    padding: 50px 20px;
+    padding: 20px 20px;
     background-color: #f0f0f0;
 }
 
@@ -29,3 +29,29 @@ footer {
     width: 100%;
     bottom: 0;
 }
+
+.key-priorities {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 2em 5em;
+    background-color: #f8f9fa;
+}
+.key-priorities h3 {
+    font-size: 1.75em;
+    font-weight: bolder;
+    margin-bottom: 20px;
+    color: #6fa243;
+}
+.key-priorities p {
+    font-size: 1em;
+    color: #6c757d;
+    margin-bottom: 40px;
+}
+.key-priorities .image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: center;
+}
+
+

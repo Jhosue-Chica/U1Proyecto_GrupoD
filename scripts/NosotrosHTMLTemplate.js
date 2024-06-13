@@ -8,7 +8,6 @@ class ImageCard extends HTMLElement {
     const template = document.querySelector('#image-card-template');
     const instance = template.content.cloneNode(true);
     
-    // Set the attributes
     instance.querySelector('img').src = this.getAttribute('image');
     instance.querySelector('img').alt = this.getAttribute('title');
     instance.querySelector('h2').innerText = this.getAttribute('title');
