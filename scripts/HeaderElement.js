@@ -206,7 +206,9 @@ class HeaderElement extends HTMLElement {
                             </div>
                         </div>
                         <div>
-                            <button class="btn btn-success donate-button" aria-label="donar ahora">Donar Ahora</button>
+                            <a href="../views/Contacto.html" aria-label="donar ahora">
+                                <button class="btn btn-success donate-button">Donar Ahora</button>
+                            </a>
                         </div>
                     </div>
                     <div class="d-flex justify-content-center align-items-center mt-3 mt-md-0">
